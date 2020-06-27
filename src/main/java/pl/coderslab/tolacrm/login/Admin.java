@@ -4,6 +4,7 @@ import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.Collection;
 import java.util.Set;
 
@@ -18,7 +19,9 @@ public class Admin {
     private String username;
     private String password;
     private int enabled;
+    @NotEmpty
     private String firstname;
+    @NotEmpty
     private String lastname;
     private String role;
 

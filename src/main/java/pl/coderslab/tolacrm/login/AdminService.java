@@ -6,4 +6,6 @@ public interface AdminService {
 
     void saveAdmin(Admin admin);
 
+    void updateAdmin(Admin admin);
+
 }

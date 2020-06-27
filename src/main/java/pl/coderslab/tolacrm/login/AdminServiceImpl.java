@@ -29,4 +29,17 @@ public class AdminServiceImpl implements AdminService{
         adminRepository.save(admin);
     }
 
+    @Override
+    public void updateAdmin(Admin admin){
+        Admin admin1 = adminRepository.getOne(admin.getId());
+        admin1.setUsername(admin.getUsername());
+        if (!admin.getPassword().equals("")){
+            admin1.setPassword(admin.getPassword());
+        }
+        admin1.setFirstname(admin.getFirstname());
+        admin1.setLastname(admin.getLastname());
+    }
+
+
+
 }
